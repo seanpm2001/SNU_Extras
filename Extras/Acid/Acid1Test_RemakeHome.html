@@ -1,0 +1,596 @@
+<!--- start of script !--->
+<HTML>
+<head> <!-- external and internal resources needed for page !-->
+<!-- .*. !--> <!-- 01 !--><!-- Encoding !--><meta charset="UTF-16"><!-- the script needed for UTF-16 encoding !--><!-- Internal resource !-->
+<!-- .ico !--><!-- 02 !--<!-- Favicon !--><link rel="icon" href="Acid1Icon.ico" type="image/x-icon"/><!-- The favicon for this page !--><!-- external resource !-->
+<!-- No longer necessary !--><!-- .js !--> <!-- 03 !--<!-- JavaScript file 1 !--><!--<script type="text/javascript" src="ExpandAll_ScriptV1.00.js"></script><!-- the script needed to automatically expand all detail tags !--><!-- external resource !-->
+<!-- .js !--><!-- 04 !--><!-- JavaScript file !--><script type="text/javascript" src="Sourcebase_SNUScriptStarter_V1.00.js"></script><!-- The full JavaScript SNU sheet, modify to your liking !-->
+<!-- No longer necessary !--><!-- .css !--><!-- 05 !--<!-- Stylesheet 1 !--><!--<link rel="stylesheet" type="text/css" href="2DStart_Style_StickySideBarVersion1.01.css"> <!-- The stylesheet for the sidebar !--><!-- external resource !-->
+<!-- No longer necessary !--><!-- .css !--><!-- 06 !--<!-- Stylesheet 2 !--><!--<link rel="stylesheet" type="text/css" href="TOP_NAVIGATION_BAR_V1.0.css"> <!-- The stylesheet for the top navigation pane !--><!-- external resource !-->
+<!-- .css !--><!-- 07 !--<!-- Stylesheet 3 !--><link rel="stylesheet" type="text/css" href="Sourcebase_SNUScriptStarter_V1.01.css"> <!-- Make sure to modify this CSS to your liking !--><!-- The stylesheet for the white text !--><!-- external resource !-->
+</head>
+<HEAD>
+<meta>
+	<meta charset="UTF-16"> <!-- Page encoding main !-->
+</meta>
+<style>
+/* Sourcebase CSS starter file
+Version 1.01 (September 27th 2019 build)
+Most recent: 1.01 (September 27th 2019 build)
+CSS starter script
+*/
+/* Start of stylesheet rules */
+/* Grid system */
+.grid-container {
+  display: grid;
+  grid-column-gap: 50px;
+  grid-template-columns: auto auto auto;
+  background-color: #2196F3;
+  padding: 10px;
+}
+.grid-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+}
+/* Transparent boxes */
+div.background {
+  background: url(klematis.jpg) repeat;
+  border: 2px solid black;
+}
+div.transbox {
+  margin-top: 0px;
+  margin-bottom: 0px; 
+  margin-right: 0px;
+  margin-left: 0px;
+  background-color: #00BFFF; /* The text was there, the background was the wrong color. A new beautiful shade of blue was added to fix this - April 6th 2019 */
+  border: 1px solid black;
+  opacity: 0.6;
+  filter: alpha(opacity=20); /* For IE8 and earlier */
+}
+div.transbox p {
+  margin: 1%; /* make sure this stays at 1%. At 5%, there is a large spacing issue between each new paragraph */
+  font-weight: bold;
+  color: #ffffff;
+}
+/* Sidebar */
+body {
+  margin: 0;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 16%;
+  background-color: #f1f1f1;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+}
+li a {
+  display: block;
+  color: #000;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+li a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+li a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
+/* Topbar */
+/* Add a black background color to the top navigation */
+.topnav {
+  background-color: #333;
+  overflow: hidden;
+}
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+/* Dropdown */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px 16px;
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+/* Headings */
+H1 {
+	color: black;
+}
+H2 {
+	color: black;
+}
+H3 {
+	color: black;
+}
+H4 {
+	color: black;
+}
+H5 {
+	color: black;
+}
+H6 {
+	color: black;
+}
+/* Dividers, paragraphs */
+HR {
+	color: black;
+}
+p {
+	color: black;
+}
+/* Other rich text */
+i {
+	color: black;
+}
+u {
+	color: black;
+}
+b {
+	color: black;
+}
+s {
+	color: black;
+}
+sub {
+	color: black;
+}
+sup {
+	color: black;
+}
+/* Progress bar 
+/* Option 1 */
+progress {
+	display:inline-block;
+	width:190px;
+	height:20px;
+	padding:15px 0 0 0;
+	margin:0;
+	background:none;
+	border: 0;
+	border-radius: 15px;
+	text-align: left;
+	position:relative;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 0.8em;
+}
+progress::-webkit-progress-bar {
+	height:11px;
+	width:150px;
+	margin:0 auto;
+	background-color: #CCC;
+	border-radius: 15px;
+	box-shadow:0px 0px 6px #777 inset;
+}
+progress::-webkit-progress-value {
+	display:inline-block;
+	float:left;
+	height:11px;
+	margin:0px -10px 0 0;
+	background: #F70;
+	border-radius: 15px;
+	box-shadow:0px 0px 6px #777 inset;
+}
+progress:after {
+	margin:-26px 0 0 -7px;
+	padding:0;
+	display:inline-block;
+}
+/* Option 2 */
+#progress {
+    background: #333;
+    border-radius: 13px;
+    height: 20px;
+    width: 300px;
+    padding: 3px;
+}
+
+#progress:after {
+    content: '';
+    display: block;
+    background: orange;
+    width: 50%;
+    height: 100%;
+    border-radius: 9px;
+}
+/* Option 3 */
+#progressbar {
+  background-color: black;
+  border-radius: 13px;
+  /* (height of inner div) / 2 + padding */
+  padding: 3px;
+}
+
+#progressbar>div {
+  background-color: orange;
+  width: 40%;
+  /* Adjust with JavaScript */
+  height: 20px;
+  border-radius: 10px;
+}
+/* Option 4 */
+/* Step 1 */
+progress,          /* All HTML5 progress enabled browsers */
+{
+
+    /* Turns off styling - not usually needed, but good to know. */
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+
+}
+/* Step 2 */
+/* IE10 */
+progress {
+    color: black;
+}
+
+/* Firefox */
+progress::-moz-progress-bar { 
+    background: black;  
+}
+
+/* Chrome */
+progress::-webkit-progress-value {
+    background: black;
+}
+/* Step 3 */
+progress[value^="9"]::-moz-progress-bar {
+background-color : red;
+}
+/* 
+More CSS - Blackboard kit
+blackboard kit 
+Version 1
+*/
+/* white text for all! */
+/* the blackboard CSS file optimizes text for dark backgrounds, just like chalk on a blackboard */
+details {
+	color: cyan;
+}
+/* heading section */
+h1 {
+	color: white;
+}
+H1 {
+	color: white;
+}
+h2 {
+	color: white;
+}
+H2 {
+	color: white;
+}
+h3 {
+	color: white;
+}
+H3 {
+	color: white;
+}
+h4 {
+	color: white;
+}
+H4 {
+	color: white;
+}
+h5 {
+	color: white;
+}
+H5 {
+	color: white;
+}
+h6 {
+	color: white;
+}
+H6 {
+	color: white;
+}
+/* rich text section */
+p {
+	color: white;
+}
+P {
+	color: white;
+}
+b {
+	color: white;
+}
+B {
+	color: white;
+}
+u {
+	color: white;
+}
+U {
+	color: white;
+}
+s {
+	color: white;
+}
+S {
+	color: white;
+}
+i {
+	color: white;
+}
+I {
+	color: white;
+}
+sub {
+	color: white;
+}
+SUB {
+	color: white;
+}
+sup {
+	color: white;
+}
+SUP {
+	color: white;
+}
+/* OPTIONAL */
+/*
+a {
+	color: white;
+}
+A {
+	color: white;
+}
+*/
+/* form section */
+form {
+	color: white;
+}
+FORM {
+	color: white;
+}
+/* specialized button hyperlink section */
+a {
+	color: green;
+}
+A {
+	color: green;
+}
+/* WebGL compatibility layer */
+canvas {
+	border: 2px solid black;
+	background-color: black;
+}
+video {
+	display: none;
+}
+/* Gallery */
+div.gallery {
+  border: 1px solid #ccc;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.responsive {
+  padding: 0 6px;
+  float: left;
+  width: 24.99999%;
+}
+
+@media only screen and (max-width: 700px) {
+  .responsive {
+    width: 49.99999%;
+    margin: 6px 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .responsive {
+    width: 100%;
+  }
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* Border image */
+#borderimg { 
+  border: 10px solid transparent;
+  padding: 15px;
+  border-image: url(border.png) 30 round;
+}
+/* end of stylesheet */
+/* End of stylesheet rules */
+/* Description
+None
+*/
+/* Statistics
+Character count: 07,.349 characters (07,.349 bytes) (07,.349 Kilobytes)
+Line count: 0,.456
+File type: *.css (Cascade Styling Sheets)
+Language: CSS (Cascade Styling Sheets)
+Version: 2 (September 27th 2019)
+Latest version: 2 (September 27th 2019)
+First version: 1 (September 26th 2019)
+*/
+</style>
+<?
+// PHP section
+?>
+<script>
+console.log("SNU web console for [browser]");
+console.log("The acid1 test console");
+console.log(">>>");
+</script>
+<TITLE>Acid1 test SNU mirror</TITLE> <!-- Page title !-->
+</HEAD>
+<BODY BGCOLOR="NAVY">
+<BODY BACKGROUND=".png"> <!-- Background image !--> <!-- Allowed formats: .png .jpg .jpe .jif .gif .bmp .dib .tif .tiff !-->
+<!-- Top navigation bar !-->
+<div class="topnav">
+<a class="active" href="display_box_float_clear test.htm">{Acid1 test SNU mirror p}</a><!-- It now aligns perfectly. The "p" stands for "page" !-->
+<a href="../WebStandardsHome.html">⛺ Back home</a>
+<a href="#Placeholder">(</a>
+<a href="Acid1Test_RemakeHome.html">⏲ Acid1 test (current page)</a><!-- An effect I like with these buttons is it makes you feel like you are still on the same page when going between the 3. It aligns pixel by pixel, However, one day it might all just be 1 page !-->
+<a href="Acid2Test_RemakeHome.html">⏲ Acid2 test</a>
+<a href="Acid3Test_RemakeHome.html">⏲ Acid3 test</a>
+<a href="#Placeholder">)</a>
+<a href="about:blank">❎ Exit SNU</a>
+</div> 
+<!-- Top navigation bar !-->
+<ul>
+<img src="Acid1Icon.png" alt="Logo.Profile_Icon" width="225" height="225">
+<li><a class="active" href="#home">[SNU Acid1 test mirror]</a></li>
+<HR>
+</ul>
+<ul>
+	<img src="Acid1Icon.png" alt="FAV" width="225" height="225">
+	<li><HR></li>
+	<li><a href="#EXPLORE">[Acid1 test page index]</a></li>
+	<li><HR></li>
+	<li><a href="#Top">♨ Top</a></li>
+	<li><a href="#Index">⚖ Index</a></li>
+	<li><a href="#NonCompliantBrowserList">➰ Non-Compliant browsers</a></li>
+	<li><a href="#CompliantBrowserList">➿ Compliant browsers</a></li>
+	<li><a href="#TestDescription">♒ Description</a></li>
+	<li><a href="#SnapshotSection">⛓ Snapshot section</a></li>
+	<li><HR></li>
+</ul>
+<div style="margin-left:15.1%;padding:1px 16px;height:1000px;">
+<!-- End of sidebar and topbar section !-->
+<HR>
+<H1 id="Top">Web standards extra component/Acid1 test</H1>
+<HR>
+<div class="background">
+	<div class="transbox">
+		<H1>View/Download links</H1>
+		<H2><button><a href="display_box_float_clear test.htm">▶ View the acid test here</a></button></H2><!-- Downloaded directly from the source, with all its original contents !-->
+		<H2><button><a href="Acid1Test.zip">Download (.zip archive)</a></button></H2>
+	</div>
+</div>
+<HR>
+<div class="background">
+	<div class="transbox">
+		<details><summary><H1 id="Index">Index</H1></summary>
+		<p><a href="#Top">♨ Top</a></p>
+		<p><a href="#Index">⚖ Index</a></p>
+		<p><a href="#NonCompliantBrowserList">➰ Non-Compliant browsers</a></p>
+		<p><a href="#CompliantBrowserList">➿ Compliant browsers</a></p>
+		<p><a href="#TestDescription">♒ Description</a></p>
+		<p><a href="#SnapshotSection">⛓ Snapshot section</a></p>
+		</details>
+	</div>
+</div>
+<HR>
+<div class="background">
+	<div class="transbox">
+		<details><summary><H1 id="NonCompliantBorwserList">Non-compliant browsers</H1></summary>
+		<p>Unknown browser</p>
+		<img src="Acid1Fail1.png" alt="ACID1_FAIL" width="1024" height="547"><!-- Verified correct resolution !-->
+		</details>
+	</div>
+</div>
+<HR>
+<div class="background">
+	<div class="transbox">
+		<details><summary><H1 id="CompliantBrowserList">Compliant browsers</H1></summary>
+		<H3>Mozilla Firefox</H3>
+		<img src="Acid1Compliance.png" alt="ACID1_SUCCESS" width="1365" height="609"><!-- Verified correct resolution !--><!-- Didn't have internet at the time of retrieving this image, so I used Firefox 70.0.1 and rendered it and took a screenshot !-->
+		</details>
+	</div>
+</div>
+<HR>
+<div class="background">
+	<div class="transbox">
+		<details><summary><H1 id="TestDescription">Description</H1></summary>
+		<p>Acid1, originally called the Box Acid Test, is a test page for web browsers. It was developed in October 1998 and was important in establishing baseline interoperability between early web browsers, especially for the Cascading Style Sheets 1.0 specification. As with acid tests for gold which produce a quick and obvious assessment of the quality of a piece of metal, the web acid tests were designed to produce a clear indication of a browser's compliance to web standards.</p>
+		<p>Acid1 tests many features on one page against a reference image. Acid1 was developed by Todd Fahrner, who was frustrated with the lack of stringent tests to improve browser interoperability. After looking at tests developed by Braden McDaniel that used reference renderings to clarify the intended result, Fahrner developed a comprehensive test that resulted in a quirky-looking graphic. In 1999, the test was incorporated into the CSS1 test suite. The text used in Acid1 is an allusion to T. S. Eliot's poem The Hollow Men. Acid1 is included as an offline Easter egg in Internet Explorer 5 for Mac OS, accessible by typing 'about:tasman', with the text replaced by the names of the developers.</p>
+		<p>By early 2008, all major browsers passed the Acid1 test.</p>
+		<p>Acid1 has served as inspiration for Acid2 and Acid3.</p>
+		<p>Original home page <a href="https://web.archive.org/web/20090403032606/http://style.cleverchimp.com/boxacidtest/">https://web.archive.org/web/20090403032606/http://style.cleverchimp.com/boxacidtest/</a></p>
+		<p>Source: <a href="https://en.wikipedia.org/wiki/Acid1">https://en.wikipedia.org/wiki/Acid1</a></p>
+		</details>
+	</div>
+</div>
+<HR>
+<div class="background">
+	<div class="transbox">
+		<details><summary><H1 id="SnapshotSection">View older versions of this page</H1></summary> 
+		<H3>Snapshots 1 to 10</H3>
+		<H4><button><a href="Acid1Test_RemakeHome_Snapshot1.html">Snapshot 1 (November 22nd 2019)</a></button></H4>
+		<H4><button><a href="Acid1Test_RemakeHome_Snapshot2.html">Snapshot 2 (November 25th 2019)</a></button></H4>
+		<H4><button><a href="Acid1Test_RemakeHome_Snapshot3.html">Snapshot 3 (November 26th 2019)</a></button></H4>
+		<H4><button><a href="Acid1Test_RemakeHome_Snapshot4.html">Snapshot 4 (November 28th 2019)</a></button></H4>
+		<H4><button><a href="Acid1Test_RemakeHome_Snapshot5.html">Snapshot 5</a></button></H4>
+		<H4><button><a href="Acid1Test_RemakeHome_Snapshot6.html">Snapshot 6</a></button></H4>
+		<H4><button><a href="Acid1Test_RemakeHome_Snapshot7.html">Snapshot 7</a></button></H4>
+		<H4><button><a href="Acid1Test_RemakeHome_Snapshot8.html">Snapshot 8</a></button></H4>
+		<H4><button><a href="Acid1Test_RemakeHome_Snapshot9.html">Snapshot 9</a></button></H4>
+		<H4><button><a href="Acid1Test_RemakeHome_Snapshot10.html">Snapshot 10</a></button></H4>
+		<H3>Snapshots 11 to 20</H3>
+		<H4><button><a href="Acid1Test_RemakeHome_Snapshot11.html">Snapshot 11</a></button></H4>
+		<H4><button><a href="Acid1Test_RemakeHome_Snapshot12.html">Snapshot 12</a></button></H4>
+		<H4><button><a href="Acid1Test_RemakeHome_Snapshot13.html">Snapshot 13</a></button></H4>
+		<H4><button><a href="Acid1Test_RemakeHome_Snapshot14.html">Snapshot 14</a></button></H4>
+		<H4><button><a href="Acid1Test_RemakeHome_Snapshot15.html">Snapshot 15</a></button></H4>
+		<H4><button><a href="Acid1Test_RemakeHome_Snapshot16.html">Snapshot 16</a></button></H4>
+		<H4><button><a href="Acid1Test_RemakeHome_Snapshot17.html">Snapshot 17</a></button></H4>
+		<H4><button><a href="Acid1Test_RemakeHome_Snapshot18.html">Snapshot 18</a></button></H4>
+		<H4><button><a href="Acid1Test_RemakeHome_Snapshot19.html">Snapshot 19</a></button></H4>
+		<H4><button><a href="Acid1Test_RemakeHome_Snapshot20.html">Snapshot 20</a></button></H4>
+		</details>
+	</div>
+</div>
+<HR>
+<H1>You have reached the bottom of this page.</H1>
+<HR>
+</BODY>
+</HTML>
+<!--- end of script !--->

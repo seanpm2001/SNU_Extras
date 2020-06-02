@@ -1,0 +1,631 @@
+<!--- start of script !--->
+<HTML>
+<head> <!-- external and internal resources needed for page !-->
+<!-- .*. !--> <!-- 01 !--><!-- Encoding !--><meta charset="UTF-16"><!-- the script needed for UTF-16 encoding !--><!-- Internal resource !-->
+<!-- .ico !--><!-- 02 !--<!-- Favicon !--><link rel="icon" href="Acid3Icon.ico" type="image/x-icon"/><!-- The favicon for this page !--><!-- external resource !-->
+<!-- No longer necessary !--><!-- .js !--> <!-- 03 !--<!-- JavaScript file 1 !--><!--<script type="text/javascript" src="ExpandAll_ScriptV1.00.js"></script><!-- the script needed to automatically expand all detail tags !--><!-- external resource !-->
+<!-- .js !--><!-- 04 !--><!-- JavaScript file !--><script type="text/javascript" src="Sourcebase_SNUScriptStarter_V1.00.js"></script><!-- The full JavaScript SNU sheet, modify to your liking !-->
+<!-- No longer necessary !--><!-- .css !--><!-- 05 !--<!-- Stylesheet 1 !--><!--<link rel="stylesheet" type="text/css" href="2DStart_Style_StickySideBarVersion1.01.css"> <!-- The stylesheet for the sidebar !--><!-- external resource !-->
+<!-- No longer necessary !--><!-- .css !--><!-- 06 !--<!-- Stylesheet 2 !--><!--<link rel="stylesheet" type="text/css" href="TOP_NAVIGATION_BAR_V1.0.css"> <!-- The stylesheet for the top navigation pane !--><!-- external resource !-->
+<!-- .css !--><!-- 07 !--<!-- Stylesheet 3 !--><link rel="stylesheet" type="text/css" href="Sourcebase_SNUScriptStarter_V1.01.css"> <!-- Make sure to modify this CSS to your liking !--><!-- The stylesheet for the white text !--><!-- external resource !-->
+</head>
+<HEAD>
+<meta>
+	<meta charset="UTF-16"> <!-- Page encoding main !-->
+</meta>
+<style>
+/* Sourcebase CSS starter file
+Version 1.01 (September 27th 2019 build)
+Most recent: 1.01 (September 27th 2019 build)
+CSS starter script
+*/
+/* Start of stylesheet rules */
+/* Grid system */
+.grid-container {
+  display: grid;
+  grid-column-gap: 50px;
+  grid-template-columns: auto auto auto;
+  background-color: #2196F3;
+  padding: 10px;
+}
+.grid-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+}
+/* Transparent boxes */
+div.background {
+  background: url(klematis.jpg) repeat;
+  border: 2px solid black;
+}
+div.transbox {
+  margin-top: 0px;
+  margin-bottom: 0px; 
+  margin-right: 0px;
+  margin-left: 0px;
+  background-color: #00BFFF; /* The text was there, the background was the wrong color. A new beautiful shade of blue was added to fix this - April 6th 2019 */
+  border: 1px solid black;
+  opacity: 0.6;
+  filter: alpha(opacity=80); /* For IE8 and earlier */
+}
+div.transbox p {
+  margin: 1%; /* make sure this stays at 1%. At 5%, there is a large spacing issue between each new paragraph */
+  font-weight: bold;
+  color: #ffffff;
+}
+/* Sidebar */
+body {
+  margin: 0;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 16%;
+  background-color: #f1f1f1;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+}
+li a {
+  display: block;
+  color: #000;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+li a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+li a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
+/* Topbar */
+/* Add a black background color to the top navigation */
+.topnav {
+  background-color: #333;
+  overflow: hidden;
+}
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+/* Dropdown */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px 16px;
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+/* Headings */
+H1 {
+	color: black;
+}
+H2 {
+	color: black;
+}
+H3 {
+	color: black;
+}
+H4 {
+	color: black;
+}
+H5 {
+	color: black;
+}
+H6 {
+	color: black;
+}
+/* Dividers, paragraphs */
+HR {
+	color: black;
+}
+p {
+	color: black;
+}
+/* Other rich text */
+i {
+	color: black;
+}
+u {
+	color: black;
+}
+b {
+	color: black;
+}
+s {
+	color: black;
+}
+sub {
+	color: black;
+}
+sup {
+	color: black;
+}
+/* Details and summary */
+details {
+	color: black;
+}
+summary {
+	color: black;
+}
+/* Progress bar 
+/* Option 1 */
+progress {
+	display:inline-block;
+	width:190px;
+	height:20px;
+	padding:15px 0 0 0;
+	margin:0;
+	background:none;
+	border: 0;
+	border-radius: 15px;
+	text-align: left;
+	position:relative;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 0.8em;
+}
+progress::-webkit-progress-bar {
+	height:11px;
+	width:150px;
+	margin:0 auto;
+	background-color: #CCC;
+	border-radius: 15px;
+	box-shadow:0px 0px 6px #777 inset;
+}
+progress::-webkit-progress-value {
+	display:inline-block;
+	float:left;
+	height:11px;
+	margin:0px -10px 0 0;
+	background: #F70;
+	border-radius: 15px;
+	box-shadow:0px 0px 6px #777 inset;
+}
+progress:after {
+	margin:-26px 0 0 -7px;
+	padding:0;
+	display:inline-block;
+}
+/* Option 2 */
+#progress {
+    background: #333;
+    border-radius: 13px;
+    height: 20px;
+    width: 300px;
+    padding: 3px;
+}
+
+#progress:after {
+    content: '';
+    display: block;
+    background: orange;
+    width: 50%;
+    height: 100%;
+    border-radius: 9px;
+}
+/* Option 3 */
+#progressbar {
+  background-color: black;
+  border-radius: 13px;
+  /* (height of inner div) / 2 + padding */
+  padding: 3px;
+}
+
+#progressbar>div {
+  background-color: orange;
+  width: 40%;
+  /* Adjust with JavaScript */
+  height: 20px;
+  border-radius: 10px;
+}
+/* Option 4 */
+/* Step 1 */
+progress,          /* All HTML5 progress enabled browsers */
+{
+
+    /* Turns off styling - not usually needed, but good to know. */
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+
+}
+/* Step 2 */
+/* IE10 */
+progress {
+    color: black;
+}
+
+/* Firefox */
+progress::-moz-progress-bar { 
+    background: black;  
+}
+
+/* Chrome */
+progress::-webkit-progress-value {
+    background: black;
+}
+/* Step 3 */
+progress[value^="9"]::-moz-progress-bar {
+background-color : red;
+}
+/* 
+More CSS - Blackboard kit
+blackboard kit 
+Version 1
+*/
+/* white text for all! */
+/* the blackboard CSS file optimizes text for dark backgrounds, just like chalk on a blackboard */
+/* heading section */
+h1 {
+	color: white;
+}
+H1 {
+	color: white;
+}
+h2 {
+	color: white;
+}
+H2 {
+	color: white;
+}
+h3 {
+	color: white;
+}
+H3 {
+	color: white;
+}
+h4 {
+	color: white;
+}
+H4 {
+	color: white;
+}
+h5 {
+	color: white;
+}
+H5 {
+	color: white;
+}
+h6 {
+	color: white;
+}
+H6 {
+	color: white;
+}
+/* rich text section */
+p {
+	color: white;
+}
+P {
+	color: white;
+}
+b {
+	color: white;
+}
+B {
+	color: white;
+}
+u {
+	color: white;
+}
+U {
+	color: white;
+}
+s {
+	color: white;
+}
+S {
+	color: white;
+}
+i {
+	color: white;
+}
+I {
+	color: white;
+}
+sub {
+	color: white;
+}
+SUB {
+	color: white;
+}
+sup {
+	color: white;
+}
+SUP {
+	color: white;
+}
+}
+details {
+	color: white;
+}
+DETAILS {
+	color: white;
+/* OPTIONAL */
+/*
+a {
+	color: white;
+}
+A {
+	color: white;
+}
+*/
+/* form section */
+form {
+	color: white;
+}
+FORM {
+	color: white;
+}
+/* specialized button hyperlink section */
+a {
+	color: green;
+}
+A {
+	color: green;
+}
+/* WebGL compatibility layer */
+canvas {
+	border: 2px solid black;
+	background-color: black;
+}
+video {
+	display: none;
+}
+/* Gallery */
+div.gallery {
+  border: 1px solid #ccc;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.responsive {
+  padding: 0 6px;
+  float: left;
+  width: 24.99999%;
+}
+
+@media only screen and (max-width: 700px) {
+  .responsive {
+    width: 49.99999%;
+    margin: 6px 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .responsive {
+    width: 100%;
+  }
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* Border image */
+#borderimg { 
+  border: 10px solid transparent;
+  padding: 15px;
+  border-image: url(border.png) 30 round;
+}
+/* end of stylesheet */
+/* End of stylesheet rules */
+/* Description
+None
+*/
+/* Statistics
+Character count: 07,.349 characters (07,.349 bytes) (07,.349 Kilobytes)
+Line count: 0,.456
+File type: *.css (Cascade Styling Sheets)
+Language: CSS (Cascade Styling Sheets)
+Version: 2 (September 27th 2019)
+Latest version: 2 (September 27th 2019)
+First version: 1 (September 26th 2019)
+*/
+</style>
+<?
+// PHP section
+?>
+<script>
+console.log("SNU web console for [browser]");
+console.log("The [section] console");
+console.log(">>>");
+</script>
+<TITLE>Acid3 test mirror</TITLE> <!-- Page title !-->
+</HEAD>
+<BODY BGCOLOR="NAVY">
+<BODY BACKGROUND=".png"> <!-- Background image !--> <!-- Allowed formats: .png .jpg .jpe .jif .gif .bmp .dib .tif .tiff !-->
+<!-- Top navigation bar !-->
+<div class="topnav">
+<a class="active" href="">{Acid3 test}</a>
+<a href="#Placeholder">(</a>
+<a href="../WebStandardsHome.html">⛺ Back home</a>
+<a href="Acid1Test_RemakeHome.html">⏲ Acid1 test</a>
+<a href="Acid2Test_RemakeHome.html">⏲ Acid2 test</a>
+<a href="Acid3Test_RemakeHome.html">⏲ Acid3 test (current page)</a>
+<a href="#Placeholder">)</a>
+<a href="about:blank">❎ Exit SNU</a>
+</div> 
+<!-- Top navigation bar !-->
+<ul>
+<img src="Acid3Icon.png" alt="Logo.Profile_Icon" width="225" height="225">
+<li><a class="active" href="#home">[Acid3 test]</a></li>
+<HR>
+</ul>
+<ul>
+	<img src="Acid3Icon.png" alt="FAV" width="225" height="225">
+	<li><HR></li>
+	<li><a href="#EXPLORE">[Acid3 test page index]</a></li>
+	<li><HR></li>
+	<li><a href="#Top">♨ Top</a></li>
+	<li><a href="#Index">⚖ Index</a></li>
+	<li><a href="#NonCompliantBrowserList">➰ Non-Compliant browsers</a></li>
+	<li><a href="#CompliantBrowserList">➿ Compliant browsers</a></li>
+	<li><a href="#TestDescription">♒ Description</a></li>
+	<li><a href="#SnapshotSection">⛓ Snapshot section</a></li>
+	<li><HR></li>
+</ul>
+<div style="margin-left:15.1%;padding:1px 16px;height:1000px;">
+<!-- End of sidebar and topbar section !-->
+<HR>
+<H1 id="Top">Web standards extra component/Acid3 test</H1>
+<HR>
+<H1>View/Download links</H1>
+<H2><button><a href="The Acid3 Test.htm">View the acid test here</a></button></H2><!-- Downloaded directly from the source, with all its original contents !-->
+<H2><button><a href="Acid3Test.zip">Download (.zip archive)</a></button></H2>
+<HR>
+<H1>Note: this test is now obsolete</H1>
+<HR>
+<details><summary><H1 id="Index">Index</H1></summary>
+<p><a href="#Top">♨ Top</a></p>
+<p><a href="#Index">⚖ Index</a></p>
+<p><a href="#NonCompliantBrowserList">➰ Non-Compliant browsers</a></p>
+<p><a href="#CompliantBrowserList">➿ Compliant browsers</a></p>
+<p><a href="#TestDescription">♒ Description</a></p>
+<p><a href="#SnapshotSection">⛓ Snapshot section</a></p>
+</details>
+<HR>
+<details><summary><H1 id="NonCompliantBrowserList">Non-compliant browsers</H1></summary>
+<H3>Fennec 1.0</H3>
+<img src="Fennec_acid3-89.png" alt="ACID3TESTFAIL" width="648" height="377"><!-- Verified correct resolution !-->
+<HR>
+<H3>Internet explorer 8</H3>
+<img src="Acid3ie8rc1.png" alt="ACID3TESTFAIL" width="836" height="666"><!-- Verified correct resolution !-->
+<HR>
+<H3>Chromium 71</H3>
+<img src="Chromium_71_Acid3_Test.png" alt="ACID3TESTFAIL" width="686" height="469"><!-- Verified correct resolution !-->
+<HR>
+<H3>Firefox 67.0.2</H3>
+<img src="Acid3_test_on_Firefox_67.0.2.png" alt="ACID3TESTFAIL" width="644" height="431"><!-- Verified correct resolution !-->
+<HR>
+<H3>SNU on Firefox 70.0.1</H3>
+<img src="SNU_Acid3TestFail.png" alt="ACIDFAIL" width="658" height="450"><!-- Verified correct resolution !-->
+</details>
+<HR>
+<details><summary><H1 id="CompliantBrowserList">Compliant browsers</H1></summary>
+<p>No images available</p>
+</details>
+<HR>
+<details><summary><H1 id="TestDescription">Description</H1></summary>
+<p><b>Overview</b></p>
+<p>The Acid3 test is a web test page from the Web Standards Project that checks a web browser's compliance with elements of various web standards, particularly the Document Object Model (DOM) and JavaScript.</p>
+<p>If the test is successful, the results of the Acid3 test will display a gradually increasing fraction counter below a series of colored rectangles. The number of subtests passed will indicate the percentage that will be displayed on the screen. This percentage does not represent an actual percentage of conformance as the test does not really keep track of the subtests that were actually started (100 is assumed). Moreover, the browser also has to render the page exactly as the reference page is rendered in the same browser. Like the text of the Acid2 test, the text of the Acid3 reference rendering is not a bitmap, in order to allow for certain differences in font rendering.</p>
+<p>Acid3 was in development from April 2007, and released on 3 March 2008. The main developer was Ian Hickson, a Google employee who also wrote the Acid2 test. Acid2 focused primarily on Cascading Style Sheets (CSS), but this third Acid test also focuses on technologies used on highly interactive websites characteristic of Web 2.0, such as ECMAScript and DOM Level 2. A few subtests also concern Scalable Vector Graphics (SVG), Extensible Markup Language (XML), and data URIs. It includes several elements from the CSS2 recommendation that were later removed in CSS2.1, but reintroduced in World Wide Web Consortium (W3C) CSS3 working drafts that have not made it to candidate recommendations yet.</p>
+<p>By April 2017, the updated specifications had diverged from the test such that the latest versions of Google Chrome and Mozilla Firefox no longer pass the test as written. Hickson acknowledges that some aspects of the test were controversial and has written that the test "no longer reflects the consensus of the Web standards it purports to test, especially when it comes to issues affecting mobile browsers".</p>
+<HR>
+<p><b>Test</b></p>
+<p>The main part of Acid3 is written in ECMAScript (JavaScript) and consists of 100 subtests in six groups called "buckets", including four special subtests (0, 97, 98, and 99).</p>
+<p>Bucket 1: DOM Traversal, DOM Range, HTTP</p>
+<p>Bucket 2: DOM2 Core and DOM2 Events</p>
+<p>Bucket 3: DOM2 Views, DOM2 Style, CSS 3 selectors and Media Queries</p>
+<p>Bucket 4: Behavior of HTML tables and forms when manipulated by script and DOM2 HTML</p>
+<p>Bucket 5: Tests from the Acid3 Competition (SVG, HTML, SMIL, Unicode, …)</p>
+<p>Bucket 6: ECMAScript</p>
+<p>The compliance criteria require that the test be run with a browser's default settings. The final rendering must have a 100/100 score and must be pixel-identical with the reference rendering. On browsers designed for personal computers, the animation has to be smooth (taking no more than 33 ms for each subtest on reference hardware equivalent to a top-of-the-line Apple laptop) as well, though slower performance on a slow device does not imply non-conformance.</p>
+<p>Acid3 rendered by Fennec 1.0 alpha 1. Buckets 2, 4, and 6 pass all 16 subtests, buckets 1 and 3 pass more than 10 subtests while bucket 5 passes more than 5 subtests.</p>
+<p>To pass the test the browser must also display a generic favicon in the browser toolbar, not the favicon image from the Acid3 web server. The Acid3 server when asked for favicon.ico gives a 404 response code, but with image data in the body. This tests that the web browser correctly handles the 404 error code when fetching the favicon, by treating this as a failure and displaying the generic icon instead.</p>
+<p>When the test is running, the rectangles will be added to the rendered image; the number of subtests passed in the bucket will determine the color of the rectangles.</p>
+<p>0 subtests passed: No rectangle shown.</p>
+<p>1–5 subtests passed: Black rectangle.</p>
+<p>6–10 subtests passed: Grey rectangle.</p>
+<p>11–15 subtests passed: Silver rectangle.</p>
+<p>All 16 subtests passed: Colored rectangle (left to right: red, orange, yellow, lime, blue, purple).</p>
+<p>Note that Acid3 does not display exactly how many subtests passed in a bucket. For example, 3 subtests passing and 4 subtests passing in bucket 2 would both render a black rectangle.</p>
+<HR>
+<p><b>Results</b></p>
+<p>After the Acid3 test page is completely rendered, the word Acid3 can be clicked to see an alert (or shift-click for a new window) explaining exactly which subtests have failed and what the error message was. In case one of the 100 tests passed but took too much time, the report includes timing results for that single test. The alert reports the total time of the whole Acid3 test.</p>
+<p>In order to render the test correctly, user agents need to implement the CSS 3 Text Shadows and the CSS 2.x Downloadable Fonts specifications, which are currently under consideration by W3C to be standardized. This is required as the test uses a custom TrueType font, called "AcidAhemTest", to cover up a 20x20 red square. Supporting Truetype fonts however is not required by the CSS specification. A browser supporting only OpenType fonts with CFF outlines or Embedded OpenType fonts could support the CSS standard, but fail the test in the Acid3 test. The glyph, when rendered by the downloaded font, is just a square, made white with CSS, and thus invisible.</p>
+<p>In addition, the test also uses Base64 encoded images, some more advanced selectors, CSS 3 color values (HSLA) as well as bogus selectors and values that should be ignored.</p>
+<p><b>Development</b></p>
+<p>Google employee Ian Hickson started working on the test in April 2007, but development progressed slowly. In December 2007, work restarted and the project received public attention on January 10, 2008, when it was mentioned in blogs by Anne van Kesteren. At the time the project resided at a URL clearly showing its experimental nature: "http://www.hixie.ch/tests/evil/acid/003/NOT_READY_PLEASE_DO_NOT_USE.html" Despite the notice in the URL, the test received widespread attention in the web-development community. At that time only 84 subtests had been done, and on January 14 Ian Hickson announced a competition to fill in the missing 16.</p>
+<p>The following developers contributed to the final test through this competition:</p>
+<p>Sylvain Pasche: subtests 66 and 67: DOM.</p>
+<p>David Chan: subtest 68: UTF-16/UCS-2.</p>
+<p>Simon Pieters (Opera) and Anne van Kesteren (Opera): subtest 71: HTML parsing.</p>
+<p>Jonas Sicking (Mozilla) and Garrett Smith: subtest 72: dynamic modification of style blocks' text nodes.</p>
+<p>Jonas Sicking (Mozilla): subtest 73: Nested events.</p>
+<p>Erik Dahlström (Opera): subtests 74 to 78: SVG and SMIL.</p>
+<p>Cameron McCormack (Batik SVG library): subtest 79: SVG fonts.</p>
+<p>Even before its official release, Acid3's impact on browser development was dramatic. In particular, WebKit's score rose from 60 to 87 in less than a month.</p>
+<p>The test was officially released on March 3, 2008. A guide and commentary was expected to follow within a few months, but, as of March 2011, only the commentary had been released. The announcement that the test is complete means only that it is to be considered "stable enough" for actual use. A few problems and bugs were found with the test, and it was modified to fix them. On March 26, 2008—the day both Opera and WebKit teams announced a 100/100 score—developers of WebKit contacted Hickson about a critical bug in Acid3 that presumably allowed a violation of the SVG 1.1 standard to pass. Hickson fixed the bug with the help of Cameron McCormack, a member of W3C's SVG Working Group.</p>
+<p>Source: <a href="https://en.wikipedia.org/wiki/Acid3">https://en.wikipedia.org/wiki/Acid3</a></p>
+</details>
+<HR>
+<details><summary><H1 id="SnapshotSection">View older versions of this page</H1></summary> 
+<H3>Snapshots 1 to 10</H3>
+<H4><button><a href="Acid3Test_RemakeHome_Snapshot1.html">Snapshot 1 (November 22nd 2019)</a></button></H4>
+<H4><button><a href="Acid3Test_RemakeHome_Snapshot2.html">Snapshot 2 (November 25th 2019)</a></button></H4>
+<H4><button><a href="Acid3Test_RemakeHome_Snapshot3.html">Snapshot 3 (November 26th 2019)</a></button></H4>
+<H4><button><a href="Acid3Test_RemakeHome_Snapshot4.html">Snapshot 4</a></button></H4>
+<H4><button><a href="Acid3Test_RemakeHome_Snapshot5.html">Snapshot 5</a></button></H4>
+<H4><button><a href="Acid3Test_RemakeHome_Snapshot6.html">Snapshot 6</a></button></H4>
+<H4><button><a href="Acid3Test_RemakeHome_Snapshot7.html">Snapshot 7</a></button></H4>
+<H4><button><a href="Acid3Test_RemakeHome_Snapshot8.html">Snapshot 8</a></button></H4>
+<H4><button><a href="Acid3Test_RemakeHome_Snapshot9.html">Snapshot 9</a></button></H4>
+<H4><button><a href="Acid3Test_RemakeHome_Snapshot10.html">Snapshot 10</a></button></H4>
+<H3>Snapshots 11 to 20</H3>
+<H4><button><a href="Acid3Test_RemakeHome_Snapshot11.html">Snapshot 11</a></button></H4>
+<H4><button><a href="Acid3Test_RemakeHome_Snapshot12.html">Snapshot 12</a></button></H4>
+<H4><button><a href="Acid3Test_RemakeHome_Snapshot13.html">Snapshot 13</a></button></H4>
+<H4><button><a href="Acid3Test_RemakeHome_Snapshot14.html">Snapshot 14</a></button></H4>
+<H4><button><a href="Acid3Test_RemakeHome_Snapshot15.html">Snapshot 15</a></button></H4>
+<H4><button><a href="Acid3Test_RemakeHome_Snapshot16.html">Snapshot 16</a></button></H4>
+<H4><button><a href="Acid3Test_RemakeHome_Snapshot17.html">Snapshot 17</a></button></H4>
+<H4><button><a href="Acid3Test_RemakeHome_Snapshot18.html">Snapshot 18</a></button></H4>
+<H4><button><a href="Acid3Test_RemakeHome_Snapshot19.html">Snapshot 19</a></button></H4>
+<H4><button><a href="Acid3Test_RemakeHome_Snapshot20.html">Snapshot 20</a></button></H4>
+</details>
+<HR>
+<H1>You have reached the bottom of this page.</H1>
+<HR>
+</BODY>
+</HTML>
+<!--- end of script !--->
